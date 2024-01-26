@@ -4,23 +4,26 @@ public class Radio {
     private int currentStation = 0;
     private int currentVolume = 0;
     private int maxCaunt;
+
+
+    public Radio(int Cnt) {
+
+        this.maxCaunt = Cnt - 1;
+
+
+    }
+
+    public Radio() {
+        this.maxCaunt = 10;
+    }
+
+
     public void increaseVolume() {
         if (currentVolume < 100) {
             currentVolume = currentVolume + 1;
         }
 
     }
-
-    public  Radio(int Cnt) {
-        if (Cnt>1) {  maxCaunt = Cnt-1;}
-        else {maxCaunt = 9;
-        }
-
-
-    }
-    public  Radio() {
-        maxCaunt = 9;
-     }
 
     public void reduceVolume() {
         if (currentVolume > 0) {

@@ -34,13 +34,12 @@ public class RadioTest {
     }
 
 
-
     @Test
     public void zeroStationTest() {
         Radio radio = new Radio(0);
         radio.setCurrentStation(5);
 
-        int expected = 5;
+        int expected = 0;
         int actual = radio.getCurrentStation();
 
         Assertions.assertEquals(expected, actual);
@@ -129,6 +128,7 @@ public class RadioTest {
 
 
     }
+
     @Test
     public void moreStationTest20() {
         Radio radio = new Radio(20);
@@ -141,6 +141,7 @@ public class RadioTest {
 
 
     }
+
     @Test
     public void nextStationTest() {
         Radio radio = new Radio();
