@@ -14,7 +14,7 @@ public class Radio {
     }
 
     public Radio() {
-        this.maxCaunt = 10;
+        this.maxCaunt = 9;
     }
 
 
