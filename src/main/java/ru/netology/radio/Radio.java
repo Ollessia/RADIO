@@ -6,9 +6,9 @@ public class Radio {
     private int maxCaunt;
 
 
-    public Radio(int Cnt) {
+    public Radio(int cnt) {
 
-        this.maxCaunt = Cnt - 1;
+        this.maxCaunt = cnt - 1;
 
 
     }
