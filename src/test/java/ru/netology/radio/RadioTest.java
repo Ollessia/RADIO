@@ -21,6 +21,34 @@ public class RadioTest {
     }
 
     @Test
+    public void normStationTest20() {
+        Radio radio = new Radio(20);
+        radio.setCurrentStation(15);
+
+        int expected = 15;
+        int actual = radio.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+
+
+    }
+
+
+    @Test
+    public void zeroStationTest() {
+        Radio radio = new Radio(0);
+        radio.setCurrentStation(5);
+
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+
+
+    }
+
+
+    @Test
     public void minusStationTest() {
         Radio radio = new Radio();
         radio.setCurrentStation(0);
@@ -92,6 +120,19 @@ public class RadioTest {
     public void moreStationTest() {
         Radio radio = new Radio();
         radio.setCurrentStation(22);
+
+        int expected = 0;
+        int actual = radio.getCurrentStation();
+
+        Assertions.assertEquals(expected, actual);
+
+
+    }
+
+    @Test
+    public void moreStationTest20() {
+        Radio radio = new Radio(20);
+        radio.setCurrentStation(28);
 
         int expected = 0;
         int actual = radio.getCurrentStation();
