@@ -8,13 +8,13 @@ public class Radio {
 
     public Radio(int cnt) {
 
-        this.maxCaunt = cnt - 1;
+        this.maxCaunt = cnt;
 
 
     }
 
     public Radio() {
-        this.maxCaunt = 9;
+        this.maxCaunt = 10;
     }
 
 
@@ -32,7 +32,7 @@ public class Radio {
     }
 
     public void next() {
-        if (currentStation < maxCaunt) {
+        if (currentStation < (maxCaunt - 1)) {
             currentStation++;
         } else {
             currentStation = 0;
@@ -43,7 +43,7 @@ public class Radio {
         if (currentStation > 0) {
             currentStation--;
         } else {
-            currentStation = maxCaunt;
+            currentStation = (maxCaunt - 1);
         }
     }
 
@@ -71,7 +71,7 @@ public class Radio {
         if (currentStation < 0) {
             return;
         }
-        if (currentStation > maxCaunt) {
+        if (currentStation > (maxCaunt - 1)) {
             return;
         }
         this.currentStation = currentStation;
